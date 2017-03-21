@@ -1,2 +1,2 @@
-# Universe
-App for university students.
+# Eventour
+App for events and conferences.
