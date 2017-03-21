@@ -7,14 +7,13 @@
 </ion-header>
 
 <ion-content>
-<div class="space"></div>
 
 <ion-list no-lines>
   <ion-item-divider color="light">{{date | date:'mediumDate'}}</ion-item-divider>
-  <ion-item *ngFor="let meeting of meetings let spacer=spacer;" [ngClass]="{ spacer: spacer }">
+  <ion-item (click)="openModal({charNum: 0})" *ngFor="let meeting of meetings let spacer=spacer;" [ngClass]="{ spacer: spacer }">
     <ion-icon name="ios-calendar-outline" item-left></ion-icon>
       <h2>{{meeting.meeting}}</h2>
-      <p>Starts At {{meeting.starttime}}</p>
+      <p>Starts At {{meeting.starttime}} / Ends At {{meeting.endtime}}</p>
   </ion-item>
 </ion-list>
 
@@ -24,7 +23,7 @@
   <ion-item *ngFor="let meeting2 of meetings2 let spacer=spacer;" [ngClass]="{ spacer: spacer }">
     <ion-icon name="ios-calendar-outline" item-left></ion-icon>
       <h2>{{meeting2.meeting}}</h2>
-      <p>Starts At {{meeting2.starttime}}</p>
+      <p>Starts At {{meeting2.starttime}} / Ends At {{meeting2.endtime}}</p>
   </ion-item>
 </ion-list>
 </ion-content>
