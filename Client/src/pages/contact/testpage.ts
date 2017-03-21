@@ -19,6 +19,8 @@ export class TestPage {
   times2: any;
 
   date: Date;
+  newdate
+  mydate
 
   constructor(public navCtrl: NavController) {
 
@@ -27,11 +29,11 @@ export class TestPage {
     this.meetings = [
     { 
     meeting: 'Sprint Meeting', 
-    time: 9.15 
+    starttime: 9.15 
     },
     { 
     meeting: 'Product Presentation', 
-    time: 12.15 
+    starttime: 12.15 
     }
     ];
 
@@ -39,19 +41,19 @@ export class TestPage {
     this.meetings2 = [
     { 
     meeting: 'Business Meeting', 
-    time: 14.15 
+    starttime: 14.15 
     },
     { 
     meeting: 'Product Presentation', 
-    time: 15.45 
+    starttime: 15.45 
     },
     { 
     meeting: 'Team Meeting', 
-    time: 18.15 
+    starttime: 18.15 
     },
     { 
     meeting: 'Job Conference', 
-    time: 19.45 
+    starttime: 19.45 
     }
     ];
 
