@@ -18,11 +18,11 @@ export class TestPage {
   meetings2: any;
   times2: any;
 
-  Date: any;
+  date: Date;
 
   constructor(public navCtrl: NavController) {
-   
-    this.Date = '03-25-2017';
+
+    this.date = new Date()
 
     this.meetings = [
     { 
@@ -37,7 +37,6 @@ export class TestPage {
 
 
     this.meetings2 = [
-
     { 
     meeting: 'Business Meeting', 
     time: 14.15 
@@ -59,4 +58,6 @@ export class TestPage {
   }
 
 }
+   
+    
 

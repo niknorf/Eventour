@@ -11,11 +11,9 @@
 
 <ion-list>
   <ion-item [ngClass]="{ spacer: spacer }">
-    <ion-icon name="ios-time-outline" item-left></ion-icon>
-      <h2>{{ date | date:'mediumDate'}}</h2>
+      <h2>{{date | date:'mediumDate'}}</h2>
   </ion-item>
 </ion-list>
-<div class="space"></div>
 <ion-list no-lines>
   <ion-item *ngFor="let meeting of meetings let spacer=spacer;" [ngClass]="{ spacer: spacer }">
     <ion-icon name="ios-calendar-outline" item-left></ion-icon>
@@ -25,9 +23,8 @@
 </ion-list>
 
 <ion-list>
-  <ion-item *ngFor="" [ngClass]="{ spacer: spacer }">
-    <ion-icon name="ios-time-outline" item-left></ion-icon>
-      <h2>{{ today | date }}</h2>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <h2>{{date | date:'mediumDate'}}</h2>
   </ion-item>
 </ion-list>
 
