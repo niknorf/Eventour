@@ -19,11 +19,21 @@
 
 <div class="space"></div>
 <ion-list no-lines>
-  <ion-item-divider color="light">{{date | date:'mediumDate'}}</ion-item-divider>
+  <ion-item-divider color="light">{{tomorrow | date:'mediumDate'}}</ion-item-divider>
   <ion-item *ngFor="let meeting2 of meetings2 let spacer=spacer;" [ngClass]="{ spacer: spacer }">
     <ion-icon name="ios-calendar-outline" item-left></ion-icon>
       <h2>{{meeting2.meeting}}</h2>
       <p>Starts At {{meeting2.starttime}} / Ends At {{meeting2.endtime}}</p>
+  </ion-item>
+</ion-list>
+
+<div class="space"></div>
+<ion-list no-lines>
+  <ion-item-divider color="light">{{dayaftertomorrow | date:'mediumDate'}}</ion-item-divider>
+  <ion-item *ngFor="let meeting3 of meetings3 let spacer=spacer;" [ngClass]="{ spacer: spacer }">
+    <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>{{meeting3.meeting}}</h2>
+      <p>Starts At {{meeting3.starttime}} / Ends At {{meeting3.endtime}}</p>
   </ion-item>
 </ion-list>
 </ion-content>
