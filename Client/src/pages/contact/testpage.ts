@@ -20,8 +20,6 @@ export class TestPage {
   date: Date;
   tomorrow: Date;
   dayaftertomorrow: Date;
-  newdate
-  mydate
 
   constructor(public navCtrl: NavController) {
 
@@ -85,7 +83,10 @@ export class TestPage {
     }
     ];
 
+
   }
 
+
 }
+
 

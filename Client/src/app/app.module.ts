@@ -7,6 +7,7 @@ import { TestPage } from '../pages/contact/testpage';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 
+
 @NgModule({
   declarations: [
     MyApp,
