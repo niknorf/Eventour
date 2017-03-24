@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { NavController} from 'ionic-angular';
+import { NavController } from 'ionic-angular';
+import { ModalController, NavParams } from 'ionic-angular';
+import { ModalPage } from '../modal/modal';
 
 @Component({
   selector: 'page-test',
@@ -21,7 +23,7 @@ export class TestPage {
   tomorrow: Date;
   dayaftertomorrow: Date;
 
-  constructor(public navCtrl: NavController) {
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, params: NavParams) {
 
     this.date = new Date()
     this.tomorrow = new Date()
@@ -86,7 +88,10 @@ export class TestPage {
 
   }
 
+  openModal(){
+
+    let shedulemodal = this.modalCtrl.create(ModalPage);
+    shedulemodal.present();
+  }
 
 }
-
-
