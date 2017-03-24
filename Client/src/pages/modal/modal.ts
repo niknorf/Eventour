@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ViewController } from 'ionic-angular';
 
 @Component ({
     templateUrl: 'modal.html',
@@ -7,7 +7,14 @@ import { NavController } from 'ionic-angular';
 
 export class ModalPage {
 
-    constructor(public navCtrl: NavController){
+    constructor(public navCtrl: NavController, public viewCtrl: ViewController){
 
     }
+
+    closeModal(){
+
+        this.viewCtrl.dismiss();
+
+    }
+
 }
