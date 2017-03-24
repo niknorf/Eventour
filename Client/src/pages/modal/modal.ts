@@ -7,7 +7,28 @@ import { NavController, ViewController } from 'ionic-angular';
 
 export class ModalPage {
 
+  meetings: any;
+
+  date: Date;
+
     constructor(public navCtrl: NavController, public viewCtrl: ViewController){
+
+        this.date = new Date()
+
+        this.meetings = [
+        { 
+        meeting: 'Sprint Meeting',
+        ago: 1,
+        starttime: 9.15,
+        endtime: 10.45
+        },
+        { 
+        meeting: 'Product Presentation',
+        ago: 5,
+        starttime: 12.15,
+        endtime: 16.35
+        }
+        ];
 
     }
 
