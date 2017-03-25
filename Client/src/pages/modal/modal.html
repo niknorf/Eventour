@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
       Details Of Shedules
     </ion-title>
@@ -13,14 +13,27 @@
 
 <ion-card *ngFor="let meeting of meetings">
 
+  <img src="{{meeting.image}}" alt="business event">
+
   <ion-item>
+
     <h2>{{meeting.meeting}}</h2>
-    <p>{{date | date:'mediumDate'}}</p>
+    
+    </ion-item>
+    <ion-item>
+
+    <ion-label>Date: <p>{{date | date:'mediumDate'}}</p></ion-label>
+
   </ion-item>
 
   <ion-card-content>
+    <ion-label>Details of The Event:</ion-label>
     <p>{{meeting.description}}</p>
   </ion-card-content>
+
+  <ion-item>
+      Location 
+  </ion-item>
 
   <ion-row>
 
