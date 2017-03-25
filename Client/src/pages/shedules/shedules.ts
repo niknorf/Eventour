@@ -5,13 +5,13 @@ import { ModalPage } from '../modal/modal';
 
 @Component({
   selector: 'page-test',
-  templateUrl: 'testpage.html',
+  templateUrl: 'shedules.html',
   styles: [`
     .spacer { padding: 0.2em; }
     `]
 })
 
-export class TestPage {
+export class ShedulesPage {
   
   meetings: any;
 

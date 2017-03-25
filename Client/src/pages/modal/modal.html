@@ -4,33 +4,22 @@
       Details Of Shedules
     </ion-title>
     <ion-buttons start (click)="closeModal()" item-right>
-        <button><ion-icon name="md-close"></ion-icon></button>
+        <button ion-button icon-only><ion-icon name="close"></ion-icon></button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
 
-<!--<ion-list no-lines>
-  <ion-item-divider color="light">hi</ion-item-divider>
-  <ion-item [ngClass]="{ spacer: spacer }">
-    <ion-icon name="ios-calendar-outline" item-left></ion-icon>
-      <h2>Tesrting</h2>
-      <p>TEst</p>
-      <ion-icon name="ios-arrow-dropright-outline" item-right></ion-icon>
-  </ion-item>
-</ion-list>-->
-
 <ion-card *ngFor="let meeting of meetings">
 
   <ion-item>
-    <ion-icon name="ios-calendar-outline" item-left></ion-icon>
     <h2>{{meeting.meeting}}</h2>
     <p>{{date | date:'mediumDate'}}</p>
   </ion-item>
 
   <ion-card-content>
-    <p>Wait a minute. Wait a minute, Doc. Uhhh... Are you telling me that you built a time machine... out of a DeLorean?! Whoa. This is heavy.</p>
+    <p>{{meeting.description}}</p>
   </ion-card-content>
 
   <ion-row>

@@ -20,13 +20,15 @@ export class ModalPage {
         meeting: 'Sprint Meeting',
         ago: 1,
         starttime: 9.15,
-        endtime: 10.45
+        endtime: 10.45, 
+        description: 'Having meeting about what we have done so far and what we are going to do next for the project.'
         },
         { 
         meeting: 'Product Presentation',
         ago: 5,
         starttime: 12.15,
-        endtime: 16.35
+        endtime: 16.35,
+        description: 'Giving information about the product and show casing a small demo of the project.'
         }
         ];
 
