@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { ModalController, NavParams } from 'ionic-angular';
 import { ModalPage } from '../modal/modal';
+import { ModalPage2 } from '../modal/modal2';
+import { ModalPage3 } from '../modal/modal3';
 
 @Component({
   selector: 'page-test',
@@ -92,6 +94,18 @@ export class ShedulesPage {
 
     let shedulemodal = this.modalCtrl.create(ModalPage);
     shedulemodal.present();
+  }
+
+  openModal2(){
+
+    let shedulemodal2 = this.modalCtrl.create(ModalPage2);
+    shedulemodal2.present();
+  }
+
+  openModal3(){
+
+    let shedulemodal3 = this.modalCtrl.create(ModalPage3);
+    shedulemodal3.present();
   }
 
 }

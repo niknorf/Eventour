@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Details Of Shedules
+    </ion-title>
+    <ion-buttons start (click)="closeModal2()" item-right>
+        <button ion-button icon-only><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let meeting2 of meetings2">
+
+  <img src="{{meeting2.image}}" alt="business event">
+
+  <ion-item>
+
+    <h2>{{meeting2.meeting}}</h2>
+    
+    </ion-item>
+    <ion-item>
+
+    <ion-label>Date: <p>{{date | date:'mediumDate'}}</p></ion-label>
+
+  </ion-item>
+
+  <ion-card-content>
+    <ion-label>Details of The Event:</ion-label>
+    <p>{{meeting2.description}}</p>
+  </ion-card-content>
+
+  <ion-item>
+      Location 
+  </ion-item>
+
+  <ion-row>
+
+    <ion-col center text-center>
+      <ion-note>
+        {{meeting2.ago}}h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+</ion-content>
