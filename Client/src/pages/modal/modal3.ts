@@ -10,10 +10,16 @@ export class ModalPage3 {
   meetings3: any;
 
   date: Date;
+  tomorrow: Date;
+  dayaftertomorrow: Date;
 
     constructor(public navCtrl: NavController, public viewCtrl: ViewController){
 
         this.date = new Date()
+        this.tomorrow = new Date()
+        this.tomorrow.setDate(this.tomorrow.getDate() + 1);
+        this.dayaftertomorrow = new Date()
+        this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2);
 
         this.meetings3 = [
         { 
@@ -21,6 +27,8 @@ export class ModalPage3 {
         ago: 1,
         starttime: 9.15,
         endtime: 10.45,
+        place: 'Class Room',
+        placenumber: 2334,
         image: '../img/businessevent.jpg',
         description: 'Having meeting about what we have done so far and what we are going to do next for the project.'
         },
@@ -29,6 +37,8 @@ export class ModalPage3 {
         ago: '2',
         starttime: 13.45,
         endtime: 15.45,
+        place: 'Class Room',
+        placenumber: 2435,
         image: '../img/businessevent.jpg',
         description: 'Meeting where we are discussing about buying a product from client.'
         },
@@ -37,6 +47,8 @@ export class ModalPage3 {
         ago: 5,
         starttime: 12.15,
         endtime: 16.35,
+        place: 'Auditorium 3',
+        placenumber: 1043,
         image: '../img/businessevent.jpg',
         description: 'Various companies are gathered to present their work and offering some job opportunities.'
         }
