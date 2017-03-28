@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Details Of Shedules
+    </ion-title>
+    <ion-buttons start (click)="closeModal3()" item-right>
+        <button ion-button icon-only><ion-icon name="close"></ion-icon></button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-card *ngFor="let meeting3 of meetings3">
+
+  <img src="{{meeting3.image}}" alt="business event">
+
+  <ion-item>
+
+    <h2>{{meeting3.meeting}}</h2>
+    
+    </ion-item>
+    <ion-item>
+
+    <ion-label>Date: <p>{{dayaftertomorrow | date:'mediumDate'}}</p></ion-label>
+
+  </ion-item>
+
+  <ion-card-content>
+    <ion-label>Details of The Event:</ion-label>
+    <p>{{meeting3.description}}</p>
+  </ion-card-content>
+
+  <ion-item>
+      <ion-label>Location:
+      <p>Room: {{meeting3.place}}</p>
+      <p>Room Number: {{meeting3.placenumber}}</p>
+      </ion-label>
+      <ion-icon name="ios-pin-outline" item-right></ion-icon>
+  </ion-item>
+
+  <ion-row>
+
+    <ion-col center text-center>
+      <ion-note>
+        {{meeting3.ago}}h ago
+      </ion-note>
+    </ion-col>
+  </ion-row>
+
+</ion-card>
+
+</ion-content>

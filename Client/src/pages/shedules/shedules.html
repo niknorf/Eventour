@@ -1,0 +1,77 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Shedules
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+<ion-list no-lines>
+  <ion-item-divider color="light">{{date | date:'mediumDate'}}</ion-item-divider>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Sprint Meeting</h2>
+      <p>Starts At 9:15 / Ends At 10:45</p>
+      <ion-icon (click)="openModal({charNum: 0})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Product Presentation</h2>
+      <p>Starts At 12:15 / Ends At 16:35</p>
+      <ion-icon (click)="openModal({charNum: 1})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+</ion-list>
+
+<ion-list no-lines>
+  <ion-item-divider color="light">{{tomorrow | date:'mediumDate'}}</ion-item-divider>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Sprint Meeting</h2>
+      <p>Starts At 9:15 / Ends At 10:45</p>
+      <ion-icon (click)="openModal2({charNum: 0})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Product Presentation</h2>
+      <p>Starts At 12:15 / Ends At 16:35</p>
+      <ion-icon (click)="openModal2({charNum: 1})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Team Meeting</h2>
+      <p>Starts At 18:15 / Ends At 18:45</p>
+      <ion-icon (click)="openModal2({charNum: 2})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Job Conference</h2>
+      <p>Starts At 19:45 / Ends At 20:45</p>
+      <ion-icon (click)="openModal2({charNum: 3})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+</ion-list>
+
+<ion-list no-lines>
+  <ion-item-divider color="light">{{dayaftertomorrow | date:'mediumDate'}}</ion-item-divider>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Sprint Meeting</h2>
+      <p>Starts At 9:15 / Ends At 10:45</p>
+      <ion-icon (click)="openModal3({charNum: 0})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+  <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Product Presentation</h2>
+      <p>Starts At 13:45 / Ends At 15:45</p>
+      <ion-icon (click)="openModal3({charNum: 1})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+   <ion-item [ngClass]="{ spacer: spacer }">
+      <ion-icon name="ios-calendar-outline" item-left></ion-icon>
+      <h2>Product Presentation</h2>
+      <p>Starts At 17:15 / Ends At 20:45</p>
+      <ion-icon (click)="openModal3({charNum: 2})" name="ios-arrow-dropright-outline" item-right></ion-icon>
+  </ion-item>
+</ion-list>
+
+</ion-content>
