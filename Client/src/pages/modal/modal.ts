@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NavController, ViewController } from 'ionic-angular';
+import { NavController, NavParams, ViewController } from 'ionic-angular';
 
 @Component ({
     templateUrl: 'modal.html',
@@ -7,15 +7,17 @@ import { NavController, ViewController } from 'ionic-angular';
 
 export class ModalPage {
 
+  content;
+
   meetings: any;
 
   date: Date;
 
-    constructor(public navCtrl: NavController, public viewCtrl: ViewController){
+    constructor(public navCtrl: NavController, public viewCtrl: ViewController, public params: NavParams){
 
         this.date = new Date()
 
-        this.meetings = [
+        let meetings = [
         { 
         meeting: 'Sprint Meeting',
         ago: 1,
@@ -37,6 +39,8 @@ export class ModalPage {
         description: 'Giving information about the product and show casing a small demo of the project.'
         }
         ];
+
+        this.content = meetings[this.params.get('modalNum')];
 
     }
 
