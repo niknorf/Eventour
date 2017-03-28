@@ -4,10 +4,9 @@ import { MyApp } from './app.component';
 import { AboutPage } from '../pages/about/about';
 import { ContactPage } from '../pages/contact/contact';
 import { ShedulesPage } from '../pages/shedules/shedules';
-import { ModalPage } from '../pages/modal/modal';
+import { ModalPage } from '../pages/shedules/shedules';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
-
 
 @NgModule({
   declarations: [
