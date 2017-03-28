@@ -54,7 +54,7 @@ export class ShedulesPage {
     <h2>{{character.meeting}}</h2>
   </ion-item>
     <ion-item>
-    <ion-label>Date: <p>{{date | date:'mediumDate'}}</p></ion-label>
+    <ion-label>Date: <p>{{character.date | date:'mediumDate'}}</p></ion-label>
   </ion-item>
     <ion-card-content>
     <ion-label>Details of The Event:</ion-label>
@@ -79,13 +79,14 @@ export class ShedulesPage {
 `
 })
 
+
 export class ModalPage {
   
   character;
 
-  date: Date;
-  tomorrow: Date;
-  dayaftertomorrow: Date;
+  date = new Date();
+  tomorrow = new Date();
+  dayaftertomorrow = new Date();
 
   constructor(
     public platform: Platform,
@@ -93,16 +94,10 @@ export class ModalPage {
     public viewCtrl: ViewController
   ) {
 
-    this.date = new Date()
-    this.tomorrow = new Date()
-    this.tomorrow.setDate(this.tomorrow.getDate() + 1);
-    this.dayaftertomorrow = new Date()
-    this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2);
-
-
     let characters = [
       {
         meeting: 'Sprint Meeting',
+        date: this.date.setDate(this.date.getDate()),
         ago: 1,
         starttime: 9.15,
         endtime: 10.45,
@@ -114,6 +109,7 @@ export class ModalPage {
       },
       {
         meeting: 'Product Presentation',
+        date: this.date.setDate(this.date.getDate()),
         ago: 5,
         starttime: 12.15,
         endtime: 16.35,
@@ -123,8 +119,10 @@ export class ModalPage {
           { place: 'Auditorium 1', placenumber: 1040 }
         ]
       },
+
       {
         meeting: 'Sprint Meeting',
+        date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 1,
         starttime: 9.15,
         endtime: 10.45,
@@ -136,6 +134,7 @@ export class ModalPage {
       },
       {
         meeting: 'Product Presentation',
+        date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 3,
         starttime: 12.15,
         endtime: 16.35,
@@ -147,6 +146,7 @@ export class ModalPage {
       },
       {
         meeting: 'Team Meeting',
+        date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 4,
         starttime: 18.15,
         endtime: 18.45,
@@ -157,7 +157,8 @@ export class ModalPage {
         ]
       },
       {
-       meeting: 'Job Conference',
+        meeting: 'Job Conference',
+        date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 6,
         starttime: 19.45,
         endtime: 20.45,
@@ -167,8 +168,10 @@ export class ModalPage {
           { place: 'Auditorium 1', placenumber: 1040 }
         ]
       },
+
       {
         meeting: 'Sprint Meeting',
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 1,
         starttime: 9.15,
         endtime: 10.45,
@@ -180,6 +183,7 @@ export class ModalPage {
       },
       {
         meeting: 'Business Meeting',
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 2,
         starttime: 13.45,
         endtime: 15.45,
@@ -191,6 +195,7 @@ export class ModalPage {
       },
       {
         meeting: 'Product Presentation',
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 5,
         starttime: 17.15,
         endtime: 20.45,
