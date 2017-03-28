@@ -99,8 +99,6 @@ export class ModalPage {
         meeting: 'Sprint Meeting',
         date: this.date.setDate(this.date.getDate()),
         ago: 1,
-        starttime: 9.15,
-        endtime: 10.45,
         image: '../img/businessevent.jpg',
         description: 'Having meeting about what we have done so far and what we are going to do next for the project.',
         items: [
@@ -111,8 +109,6 @@ export class ModalPage {
         meeting: 'Product Presentation',
         date: this.date.setDate(this.date.getDate()),
         ago: 5,
-        starttime: 12.15,
-        endtime: 16.35,
         image: '../img/businessevent.jpg',
         description: 'Giving information about the product and show casing a small demo of the project.',
         items: [
@@ -124,8 +120,6 @@ export class ModalPage {
         meeting: 'Sprint Meeting',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 1,
-        starttime: 9.15,
-        endtime: 10.45,
         image: '../img/businessevent.jpg',
         description: 'Having meeting about what we have done so far and what we are going to do next for the project.',
         items: [
@@ -136,8 +130,6 @@ export class ModalPage {
         meeting: 'Product Presentation',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 3,
-        starttime: 12.15,
-        endtime: 16.35,
         image: '../img/businessevent.jpg',
         description: 'Giving information about the product and show casing a small demo of the project.',
         items: [
@@ -148,8 +140,6 @@ export class ModalPage {
         meeting: 'Team Meeting',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 4,
-        starttime: 18.15,
-        endtime: 18.45,
         image: '../img/businessevent.jpg',
         description: 'Small meeting with project team where we discuss about the current state of the project.',
         items: [
@@ -160,8 +150,6 @@ export class ModalPage {
         meeting: 'Job Conference',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 6,
-        starttime: 19.45,
-        endtime: 20.45,
         image: '../img/businessevent.jpg',
         description: 'Small meeting with project team where we discuss about the current state of the project.',
         items: [
@@ -173,8 +161,6 @@ export class ModalPage {
         meeting: 'Sprint Meeting',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 1,
-        starttime: 9.15,
-        endtime: 10.45,
         image: '../img/businessevent.jpg',
         description: 'Various companies are gathered to present their work and offering some job opportunities.',
         items: [
@@ -185,8 +171,6 @@ export class ModalPage {
         meeting: 'Business Meeting',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 2,
-        starttime: 13.45,
-        endtime: 15.45,
         image: '../img/businessevent.jpg',
         description: 'Meeting where we are discussing about buying a product from client.',
         items: [
@@ -197,8 +181,6 @@ export class ModalPage {
         meeting: 'Product Presentation',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
         ago: 5,
-        starttime: 17.15,
-        endtime: 20.45,
         image: '../img/businessevent.jpg',
         description: 'Various companies are gathered to present their work and offering some job opportunities.',
         items: [
