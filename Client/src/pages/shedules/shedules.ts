@@ -18,23 +18,23 @@ export class ShedulesPage {
   constructor(
     public navCtrl: NavController, 
     public modalCtrl: ModalController) { 
-
+// These are handling the date to show correct dates.
     this.date = new Date()
     this.tomorrow = new Date()
     this.tomorrow.setDate(this.tomorrow.getDate() + 1);
     this.dayaftertomorrow = new Date()
     this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2);
-
+// Date function ends.
   }
-
+// Handles opening the modal.
   openModal(characterNum) {
 
     let modal = this.modalCtrl.create(ModalPage, characterNum);
     modal.present();
   }
-
+// Modal function ends.
 }
-
+// Template of the modal view that will be seen when modal is opened.
 @Component({
   template: `
 <ion-header>
@@ -78,16 +78,16 @@ export class ShedulesPage {
 </ion-content>
 `
 })
-
+// Modal template view ends.
 
 export class ModalPage {
   
   character;
-
+// Property of date for modal view.
   date = new Date();
   tomorrow = new Date();
   dayaftertomorrow = new Date();
-
+// Ends here.
   constructor(
     public platform: Platform,
     public params: NavParams,
