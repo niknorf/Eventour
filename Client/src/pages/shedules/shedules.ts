@@ -2,14 +2,17 @@ import { Component } from '@angular/core';
 import { NavController, ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-test',
+  selector: 'page-events',
   templateUrl: 'shedules.html',
   styles: [`
     .spacer { padding: 0.2em; }
     `]
 })
 
+
 export class ShedulesPage {
+
+  event: string = "events";
 
   date: Date;
   tomorrow: Date;
@@ -20,8 +23,10 @@ export class ShedulesPage {
     public modalCtrl: ModalController) { 
 // These are handling the date to show correct dates.
     this.date = new Date()
+// Gets the current date and increments it by 1.
     this.tomorrow = new Date()
     this.tomorrow.setDate(this.tomorrow.getDate() + 1);
+// Gets the tomorrows date and increments it by 1.
     this.dayaftertomorrow = new Date()
     this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 1);
 // Date function ends.
@@ -79,7 +84,6 @@ export class ShedulesPage {
 `
 })
 // Modal template view ends.
-
 export class ModalPage {
   
   character;

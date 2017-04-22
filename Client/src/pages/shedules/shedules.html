@@ -1,14 +1,24 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title>
-      Shedules
+      Shedule Of Events
     </ion-title>
   </ion-navbar>
+  <ion-toolbar no-border-top>
+    <ion-segment [(ngModel)]="event">
+      <ion-segment-button value="events">
+        Events
+      </ion-segment-button>
+      <ion-segment-button value="conferences">
+        Conferences
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
-<ion-list no-lines>
+<div [ngSwitch]="event">
+<ion-list no-lines *ngSwitchCase="'events'">
   <ion-item-divider color="light">{{date | date:'mediumDate'}}</ion-item-divider>
   <ion-item [ngClass]="{ spacer: spacer }">
       <ion-icon id="event1" name="ios-calendar-outline" item-left></ion-icon>
@@ -22,9 +32,7 @@
       <p>11:30 AM - 14:00 PM</p>
       <ion-icon (click)="openModal({charNum: 1})" name="ios-arrow-dropright-outline" item-right></ion-icon>
   </ion-item>
-</ion-list>
 
-<ion-list no-lines>
   <ion-item-divider color="light">{{tomorrow | date:'mediumDate'}}</ion-item-divider>
   <ion-item [ngClass]="{ spacer: spacer }">
       <ion-icon id="event1" name="ios-calendar-outline" item-left></ion-icon>
@@ -50,9 +58,7 @@
       <p>19:45 PM - 20:45 PM</p>
       <ion-icon (click)="openModal({charNum: 5})" name="ios-arrow-dropright-outline" item-right></ion-icon>
   </ion-item>
-</ion-list>
 
-<ion-list no-lines>
   <ion-item-divider color="light">{{dayaftertomorrow | date:'mediumDate'}}</ion-item-divider>
   <ion-item [ngClass]="{ spacer: spacer }">
       <ion-icon id="event1" name="ios-calendar-outline" item-left></ion-icon>
@@ -74,4 +80,8 @@
   </ion-item>
 </ion-list>
 
+<ion-list no-lines *ngSwitchCase="'conferences'">
+
+</ion-list>
+</div>
 </ion-content>
