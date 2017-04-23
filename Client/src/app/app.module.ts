@@ -1,10 +1,10 @@
 import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
-import { Storage } from '@ionic/storage';
+import { IonicStorageModule } from '@ionic/storage'
 import { MyApp } from './app.component';
 //Imports the pages.
 import { SpeakersPage } from '../pages/speakers/speakers';
-import { ChatPage } from '../pages/chat/chat';
+// import { ChatPage } from '../pages/chat-view/chat-view';
 import { MapPage } from '../pages/map/map';
 import { ShedulesPage } from '../pages/shedules/shedules';
 import { ModalPage } from '../pages/shedules/shedules';
@@ -44,7 +44,8 @@ const myFirebaseAuthConfig = {
     MapPage,
     ShedulesPage,
     LoginPage,
-    ChatPage,
+    // ChatPage,
+    ChatViewPage,
     ModalPage,
     HomePage,
     TabsPage,
@@ -52,7 +53,8 @@ const myFirebaseAuthConfig = {
   ],
   imports: [
     IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -61,12 +63,13 @@ const myFirebaseAuthConfig = {
     MapPage,
     ShedulesPage,
     LoginPage,
-    ChatPage,
+    // ChatPage,
+    ChatViewPage,
     ModalPage,
     HomePage,
     TabsPage
   ],
   providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
-  AuthProvider, ChatsProvider, UserProvider, UtilProvider, Storage]
+    AuthProvider, ChatsProvider, UserProvider, UtilProvider, IonicStorageModule]
 })
 export class AppModule { }
