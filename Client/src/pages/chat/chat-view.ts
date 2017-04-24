@@ -13,7 +13,8 @@ export class ChatViewPage {
   interlocutor:string;
   chats:FirebaseListObservable<any>;  
   @ViewChild(Content) content: Content;
-  constructor(public nav:NavController, 
+  constructor(
+  public nav:NavController, 
   params:NavParams, 
   public chatsProvider:ChatsProvider, 
   public af:AngularFire, 
