@@ -28,7 +28,7 @@ ionViewDidLoad(){
  
     let mapOptions = {
       center: latLng,
-      zoom: 17,
+      zoom: 20,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
  
