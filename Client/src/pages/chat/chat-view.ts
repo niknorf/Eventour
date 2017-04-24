@@ -8,13 +8,16 @@ import { UserProvider } from '../../providers/user-provider/user-provider';
   templateUrl: 'chat-view.html',
 })
 export class ChatViewPage {
+    
   message: string;
   uid:string;
   interlocutor:string;
   chats:FirebaseListObservable<any>;  
-  @ViewChild(Content) content: Content;
-  constructor(
-  public nav:NavController, 
+ 
+ @ViewChild(Content) content: Content;
+ 
+ constructor
+ (public nav:NavController, 
   params:NavParams, 
   public chatsProvider:ChatsProvider, 
   public af:AngularFire, 
@@ -24,8 +27,7 @@ export class ChatViewPage {
     this.interlocutor = params.data.interlocutor;
     
     // Get Chat Reference
-    chatsProvider.getChatRef(this.uid, this.interlocutor)
-    .then((chatRef:any) => {  
+    chatsProvider.getChatRef(this.uid, this.interlocutor).then((chatRef:any) => {  
         this.chats = this.af.database.list(chatRef);
     });
   }
@@ -49,8 +51,7 @@ export class ChatViewPage {
   
   sendPicture() {
       let chat = {from: this.uid, type: 'picture', picture:null};
-      this.userProvider.getPicture()
-      .then((image) => {
+      this.userProvider.getPicture().then((image) => {
           chat.picture =  image;
           this.chats.push(chat);
       });

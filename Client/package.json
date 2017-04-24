@@ -32,6 +32,7 @@
     "mongoose": "^4.9.3",
     "rxjs": "5.0.1",
     "sw-toolbox": "3.4.0",
+    "typescript": "^2.0.2",
     "zone.js": "0.7.2"
   },
   "devDependencies": {
@@ -44,6 +45,7 @@
     "cordova-plugin-statusbar",
     "cordova-plugin-device",
     "cordova-plugin-splashscreen",
+    "cordova-plugin-camera",
     "ionic-plugin-keyboard"
   ],
   "cordovaPlatforms": [],

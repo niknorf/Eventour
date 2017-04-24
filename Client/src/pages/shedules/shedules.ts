@@ -12,8 +12,6 @@ import { NavController, ModalController, Platform, NavParams, ViewController } f
 
 export class ShedulesPage {
 
-  event: string = "events";
-
   date: Date;
   tomorrow: Date;
   dayaftertomorrow: Date;
