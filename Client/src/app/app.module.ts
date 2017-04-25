@@ -4,13 +4,11 @@ import { MyApp } from './app.component';
 //Imports the pages.
 import { SpeakersPage } from '../pages/speakers/speakers';
 import { MapPage } from '../pages/map/map';
-import { ShedulesPage } from '../pages/shedules/shedules';
-import { ModalPage } from '../pages/shedules/shedules';
+import { ShedulesPage } from '../pages/schedules/schedules';
+import { ModalPage } from '../pages/schedules/schedules';
 import { HomePage } from '../pages/home/home';
 //Imports the tabs.
 import { TabsPage } from '../pages/tabs/tabs';
-//Provides the view for the chat.
-import { ChatsPage } from '../pages/chat/chat';
 
 @NgModule({
   declarations: [
@@ -18,7 +16,6 @@ import { ChatsPage } from '../pages/chat/chat';
     SpeakersPage,
     MapPage,
     ShedulesPage,
-    ChatsPage,
     ModalPage,
     HomePage,
     TabsPage,
@@ -33,7 +30,6 @@ import { ChatsPage } from '../pages/chat/chat';
     SpeakersPage,
     MapPage,
     ShedulesPage,
-    ChatsPage,
     ModalPage,
     HomePage,
     TabsPage
