@@ -7,31 +7,10 @@ import { MapPage } from '../pages/map/map';
 import { ShedulesPage } from '../pages/shedules/shedules';
 import { ModalPage } from '../pages/shedules/shedules';
 import { HomePage } from '../pages/home/home';
-//Login page view.
-import { LoginPage } from '../pages/login/login';
 //Imports the tabs.
 import { TabsPage } from '../pages/tabs/tabs';
 //Provides the view for the chat.
 import { ChatsPage } from '../pages/chat/chat';
-import { ChatViewPage } from '../pages/chat/chat-view';
-//Firebase config.
-import { AngularFireModule, AuthProviders, AuthMethods } from 'angularfire2';
-import { AuthProvider } from '../providers/auth-provider/auth-provider';
-import { ChatsProvider } from '../providers/chats-provider/chats-provider';
-import { UserProvider } from '../providers/user-provider/user-provider';
-import { UtilProvider } from '../providers/utils';
-
-export const firebaseConfig = {
-  apiKey: "AIzaSyD0Tr-1GKbv5uy0pgR3nC_8NwDhepZR2D4",
-  authDomain: "eventour-a8581.firebaseapp.com",
-  databaseURL: "https://eventour-a8581.firebaseio.com",
-  storageBucket: "eventour-a8581.appspot.com",
-};
-
-const myFirebaseAuthConfig = {
-  provider: AuthProviders.Password,
-  method: AuthMethods.Password
-}
 
 @NgModule({
   declarations: [
@@ -39,35 +18,27 @@ const myFirebaseAuthConfig = {
     SpeakersPage,
     MapPage,
     ShedulesPage,
-    LoginPage,
     ChatsPage,
-    ChatViewPage,
     ModalPage,
     HomePage,
     TabsPage,
 
   ],
   imports: [
-    IonicModule.forRoot(MyApp),
-    AngularFireModule.initializeApp(firebaseConfig, myFirebaseAuthConfig)
+    IonicModule.forRoot(MyApp)
   ],
-
-
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     SpeakersPage,
     MapPage,
     ShedulesPage,
-    LoginPage,
     ChatsPage,
-    ChatViewPage,
     ModalPage,
     HomePage,
     TabsPage
   ],
-  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler },
-  AuthProvider, ChatsProvider, UserProvider, UtilProvider]
+  providers: [{ provide: ErrorHandler, useClass: IonicErrorHandler }]
 })
 
 export class AppModule { }
