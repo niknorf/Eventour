@@ -19,25 +19,25 @@ export class ShedulesPage {
   dayaftertomorrow: Date;
 
   constructor(
-    public navCtrl: NavController, 
-    public modalCtrl: ModalController) { 
-// These are handling the date to show correct dates.
+    public navCtrl: NavController,
+    public modalCtrl: ModalController) {
+    // These are handling the date to show correct dates.
     this.date = new Date()
-// Gets the current date and increments it by 1.
+    // Gets the current date and increments it by 1.
     this.tomorrow = new Date()
     this.tomorrow.setDate(this.tomorrow.getDate() + 1);
-// Gets the tomorrows date and increments it by 1.
+    // Gets the tomorrows date and increments it by 1.
     this.dayaftertomorrow = new Date()
     this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 1);
-// Date function ends.
+    // Date function ends.
   }
-// Handles opening the modal.
+  // Handles opening the modal.
   openModal(characterNum) {
 
     let modal = this.modalCtrl.create(ModalPage, characterNum);
     modal.present();
   }
-// Modal function ends.
+  // Modal function ends.
 }
 // Template of the modal view that will be seen when modal is opened.
 @Component({
@@ -85,13 +85,13 @@ export class ShedulesPage {
 })
 // Modal template view ends.
 export class ModalPage {
-  
+
   character;
-// Property of date for modal view.
+  // Property of date for modal view.
   date = new Date();
   tomorrow = new Date();
   dayaftertomorrow = new Date();
-// Ends here.
+  // Ends here.
   constructor(
     public platform: Platform,
     public params: NavParams,
@@ -191,8 +191,8 @@ export class ModalPage {
           { place: 'Auditorium 3', placenumber: 1043 }
         ]
       }
-      ];
-  
+    ];
+
     this.character = characters[this.params.get('charNum')];
   }
 

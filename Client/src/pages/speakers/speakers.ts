@@ -8,6 +8,6 @@ import { NavController } from 'ionic-angular';
 export class SpeakersPage {
 
     constructor(
-      public nav: NavController) {}
+        public nav: NavController) { }
 
 }
