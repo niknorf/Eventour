@@ -2,12 +2,13 @@ import { Component } from '@angular/core';
 import { NavController, ModalController, Platform, NavParams, ViewController } from 'ionic-angular';
 
 @Component({
-  selector: 'page-test',
+  selector: 'page-events',
   templateUrl: 'shedules.html',
   styles: [`
     .spacer { padding: 0.2em; }
     `]
 })
+
 
 export class ShedulesPage {
 
@@ -16,25 +17,27 @@ export class ShedulesPage {
   dayaftertomorrow: Date;
 
   constructor(
-    public navCtrl: NavController, 
-    public modalCtrl: ModalController) { 
-
+    public navCtrl: NavController,
+    public modalCtrl: ModalController) {
+    // These are handling the date to show correct dates.
     this.date = new Date()
+    // Gets the current date and increments it by 1.
     this.tomorrow = new Date()
     this.tomorrow.setDate(this.tomorrow.getDate() + 1);
+    // Gets the tomorrows date and increments it by 1.
     this.dayaftertomorrow = new Date()
-    this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2);
-
+    this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 1);
+    // Date function ends.
   }
-
+  // Handles opening the modal.
   openModal(characterNum) {
 
     let modal = this.modalCtrl.create(ModalPage, characterNum);
     modal.present();
   }
-
+  // Modal function ends.
 }
-
+// Template of the modal view that will be seen when modal is opened.
 @Component({
   template: `
 <ion-header>
@@ -78,16 +81,15 @@ export class ShedulesPage {
 </ion-content>
 `
 })
-
-
+// Modal template view ends.
 export class ModalPage {
-  
-  character;
 
+  character;
+  // Property of date for modal view.
   date = new Date();
   tomorrow = new Date();
   dayaftertomorrow = new Date();
-
+  // Ends here.
   constructor(
     public platform: Platform,
     public params: NavParams,
@@ -96,21 +98,21 @@ export class ModalPage {
 
     let characters = [
       {
-        meeting: 'Sprint Meeting',
+        meeting: 'Angular Development',
         date: this.date.setDate(this.date.getDate()),
         ago: 1,
         image: '../img/businessevent.jpg',
-        description: 'Having meeting about what we have done so far and what we are going to do next for the project.',
+        description: 'Hosting a Angular Workshop where people can learn basics of Latest AngularJs.',
         items: [
-          { place: 'Class Room', placenumber: 2218 }
+          { place: 'Main Stage', placenumber: 1312 }
         ]
       },
       {
-        meeting: 'Product Presentation',
+        meeting: 'Digital Marketing',
         date: this.date.setDate(this.date.getDate()),
         ago: 5,
         image: '../img/businessevent.jpg',
-        description: 'Giving information about the product and show casing a small demo of the project.',
+        description: 'Jordan Belfort is talking how digital marketing is working nowdays and sharing useful information how to utilize doing marketing in digital era.',
         items: [
           { place: 'Auditorium 1', placenumber: 1040 }
         ]
@@ -159,7 +161,7 @@ export class ModalPage {
 
       {
         meeting: 'Sprint Meeting',
-        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 1,
         image: '../img/businessevent.jpg',
         description: 'Various companies are gathered to present their work and offering some job opportunities.',
@@ -169,7 +171,7 @@ export class ModalPage {
       },
       {
         meeting: 'Business Meeting',
-        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 2,
         image: '../img/businessevent.jpg',
         description: 'Meeting where we are discussing about buying a product from client.',
@@ -179,7 +181,7 @@ export class ModalPage {
       },
       {
         meeting: 'Product Presentation',
-        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 3),
+        date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 5,
         image: '../img/businessevent.jpg',
         description: 'Various companies are gathered to present their work and offering some job opportunities.',
@@ -187,8 +189,8 @@ export class ModalPage {
           { place: 'Auditorium 3', placenumber: 1043 }
         ]
       }
-      ];
-  
+    ];
+
     this.character = characters[this.params.get('charNum')];
   }
 

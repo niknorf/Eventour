@@ -16,6 +16,9 @@
   "include": [
     "src/**/*.ts"
   ],
+  "types":[
+    "firebase"
+  ],
   "exclude": [
     "node_modules"
   ],
