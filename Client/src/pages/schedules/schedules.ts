@@ -121,11 +121,11 @@ export class ModalPage {
       },
 
       {
-        meeting: 'Sprint Meeting',
+        meeting: 'Java Development',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 1,
         image: '../img/businessevent.jpg',
-        description: 'Having meeting about what we have done so far and what we are going to do next for the project.',
+        description: 'Going through latest Java technologies and going through latest changes.',
         items: [
           { place: 'Class Room', placenumber: 3332 }
         ]

@@ -32178,16 +32178,16 @@ page-map #map {
   height: 100%;
 }
 
-page-events .item-divider-md {
+page-shedules .item-divider-md {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 1.15em;
 }
 
-page-events #event1 {
+page-shedules #event1 {
   color: green;
 }
 
-page-events #event2 {
+page-shedules #event2 {
   color: blue;
 }
 
