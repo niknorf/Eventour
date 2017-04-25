@@ -141,11 +141,11 @@ export class ModalPage {
         ]
       },
       {
-        meeting: 'Team Meeting',
+        meeting: 'Social Media',
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 4,
         image: '../img/businessevent.jpg',
-        description: 'Small meeting with project team where we discuss about the current state of the project.',
+        description: 'What is the state of social media nowdays.',
         items: [
           { place: 'Class Room', placenumber: 2438 }
         ]
@@ -155,38 +155,38 @@ export class ModalPage {
         date: this.date.setDate(this.tomorrow.getDate() + 1),
         ago: 6,
         image: '../img/businessevent.jpg',
-        description: 'Small meeting with project team where we discuss about the current state of the project.',
+        description: 'Companies are presenting their offerings and tell what kind of job oppurtunities they have.',
         items: [
           { place: 'Auditorium 1', placenumber: 1040 }
         ]
       },
 
       {
-        meeting: 'Sprint Meeting',
+        meeting: 'Digital Marketing',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 1,
         image: '../img/businessevent.jpg',
-        description: 'Various companies are gathered to present their work and offering some job opportunities.',
+        description: 'What is the digital market and how it works.',
         items: [
           { place: 'Class Room', placenumber: 2334 }
         ]
       },
       {
-        meeting: 'Business Meeting',
+        meeting: 'Establishing Start-Up',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 2,
         image: '../img/businessevent.jpg',
-        description: 'Meeting where we are discussing about buying a product from client.',
+        description: 'Basics of how to create your own company and what is required for it.',
         items: [
           { place: 'Class Room', placenumber: 2435 }
         ]
       },
       {
-        meeting: 'Product Presentation',
+        meeting: 'Web Development',
         date: this.dayaftertomorrow.setDate(this.tomorrow.getDate() + 2),
         ago: 5,
         image: '../img/businessevent.jpg',
-        description: 'Various companies are gathered to present their work and offering some job opportunities.',
+        description: 'Going throught some latest technologies in web development.',
         items: [
           { place: 'Auditorium 3', placenumber: 1043 }
         ]

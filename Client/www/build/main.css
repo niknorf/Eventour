@@ -32183,14 +32183,6 @@ page-shedules .item-divider-md {
   font-size: 1.15em;
 }
 
-page-shedules #event1 {
-  color: green;
-}
-
-page-shedules #event2 {
-  color: blue;
-}
-
 page-speakers #icon {
   font-size: 2.5em;
   display: -webkit-flex !important;
